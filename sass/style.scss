@@ -1,0 +1,26 @@
+body {
+    width: 414px;
+    margin: 0;
+}
+
+header {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.localisation {
+    border-top: solid 2px lightgray;
+    padding: 10px 10px 10px 30px;
+    background-color: rgb(241, 239, 239);
+    .recherche {
+        display: flex;
+        justify-content: center;
+    }
+    .champsderecherche{
+        border: none;
+        font-weight: bold;
+        padding-left: 10px;
+        background-color:rgb(241, 239, 239) ;
+    }
+}

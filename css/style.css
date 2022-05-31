@@ -1,0 +1,38 @@
+body {
+  width: 414px;
+  margin: 0;
+}
+
+header {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+.localisation {
+  border-top: solid 2px lightgray;
+  padding: 10px 10px 10px 30px;
+  background-color: #f1efef;
+}
+
+.localisation .recherche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.localisation .champsderecherche {
+  border: none;
+  font-weight: bold;
+  padding-left: 10px;
+  background-color: #f1efef;
+}
+/*# sourceMappingURL=style.css.map */
