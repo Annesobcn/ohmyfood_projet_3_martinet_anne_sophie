@@ -8,8 +8,8 @@
     background: rgb(147,86,220);
 background: linear-gradient(353deg, rgba(147,86,220,1) 36%, rgba(255,121,218,1) 79%, rgba(255,121,218,1) 100%);
     @include shadow;
-        @mixin btn-survol($:hover) {
-        opacity: 0,5;
-        @include shadowsurvol; 
-        }
 }
+@mixin btn-clair {
+    opacity: 0,5;
+    @include shadowsurvol; 
+    }

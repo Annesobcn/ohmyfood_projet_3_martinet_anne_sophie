@@ -1,5 +1,5 @@
 @import "./utils/variables";
-@import "./composants/btn.scss";
+@import "./composants/btn";
 
 body {
     margin: 0;
@@ -45,7 +45,9 @@ header {
 }
 .btn{
         @include btn-style;
-        @include btn-style:hover($suvol);
+    }
+button :hover {
+        @include btn-clair;
     }
 .choix {
     
