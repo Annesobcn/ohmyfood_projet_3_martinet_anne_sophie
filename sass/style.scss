@@ -12,6 +12,7 @@ header {
     justify-content: center;
     padding: 10px;
 }
+/*section localisation*/
 .localisation {
     -webkit-box-shadow: inset 0px 4px 16px -11px rgba(0,0,0,0.98); 
     box-shadow: inset 0px 4px 16px -11px rgba(0,0,0,0.98);
@@ -28,53 +29,71 @@ header {
         background-color:rgb(241, 239, 239) ;
     }
 }
+/*section reservation*/
 .resa {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(246, 246, 246);
     padding: 15px 0 55px 0;
-    .resa--titre {
+    .resa__titre {
         flex-wrap: wrap;
             text-align: center;
     }
-    .resa--texte {
+    .resa__texte {
         flex-wrap: wrap;
         text-align: center;
     }
 }
+/*bouton animé*/
 .btn{
-        @include btn-style;
+     @include btn-style;
+
+    .btn a{
+       text-decoration: none;
+   }
+    &:hover {
+        @include btn-clair
+            }
     }
-button :hover {
-        @include btn-clair;
-    }
-.choix {
-    
-    padding: 10px;
-    .bloc{
-        margin-left: -15px;
-        display: flex;
-        justify-content: space-around;
-        width: 90%;
-        border-radius: 15px;
-        background-color:rgb(246, 246, 246);
-        @include shadow;
-        .icon--store, .icon--list, .icon--phone{
-            color: gray;
-            padding-top: 15px;
-        }
-            .bloc--texte {
-                font-weight: bold;
+    /*section choix du resto*/
+    .choix {
+  
+        padding: 10px;
+        .bloc{
+            margin-left: -15px;
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            border-radius: 15px;
+            background-color:rgb(246, 246, 246);
+            @include shadow;
+            .icon--store, .icon--list, .icon--phone{
+                color: gray;
+                padding-top: 15px;
+            }
+                .bloc--texte {
+                    font-weight: bold;
+                }
+            }
+            .bulle{
+               z-index: 1;
+               font-weight: bold;
+               width: 45px;
+               min-width: 45px;
+               height: 45px;
+               border-radius: 50%;
+               background-color: $couleurprimaire;
+                bulle--texte{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                        color: white;
+                        font-weight: bold;
+                    
+                }
+               
+              
             }
         }
-        .bulle{
-            z-index: 1;
-           width: 45px;
-           min-width: 45px;
-           height: 45px;
-           border-radius: 50%;
-           background-color: $couleurprimaire;
-           color: #fff;
-        }
-    }
+    

@@ -69,8 +69,6 @@ header {
   padding: 15px;
   color: white;
   border: transparent;
-  background: #FF79DA;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(9%, #FF79DA), to(#9356DC));
   background: linear-gradient(to bottom, #FF79DA 0%, #FF79DA 9%, #9356DC 100%);
   -webkit-box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
