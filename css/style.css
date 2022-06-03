@@ -1,113 +1,99 @@
+@charset "UTF-8";
 body {
   margin: 0;
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 header {
   width: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 10px;
 }
 
+/*section localisation*/
 .localisation {
-  -webkit-box-shadow: inset 0px 4px 16px -11px rgba(0, 0, 0, 0.98);
   box-shadow: inset 0px 4px 16px -11px rgba(0, 0, 0, 0.98);
   padding: 20px 10px 15px 20px;
-  background-color: #f1efef;
+  background-color: rgb(241, 239, 239);
 }
-
 .localisation .recherche {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .localisation .champsderecherche {
   border: none;
   font-weight: bold;
   padding-left: 10px;
-  background-color: #f1efef;
+  background-color: rgb(241, 239, 239);
 }
 
+/*section reservation*/
 .resa {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #f6f6f6;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
   padding: 15px 0 55px 0;
+  /*bouton animé*/
 }
-
-.resa .resa--titre {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.resa .resa__titre {
+  flex-wrap: wrap;
   text-align: center;
 }
-
-.resa .resa--texte {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.resa .resa__texte {
+  flex-wrap: wrap;
   text-align: center;
 }
-
 .resa .btn {
+  text-decoration: none;
   border-radius: 25px 25px 25px 25px;
   padding: 15px;
   color: white;
-  border: transparent;
-  background: linear-gradient(to bottom, #FF79DA 0%, #FF79DA 9%, #9356DC 100%);
-  -webkit-box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
-}
-
-.choix {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 10px;
-}
-
-.choix .bloc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 90%;
-  border-radius: 15px;
-  background-color: #f6f6f6;
-  -webkit-box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
+  background: rgb(147, 86, 220);
+  background: linear-gradient(353deg, rgb(147, 86, 220) 36%, rgb(255, 121, 218) 79%, rgb(255, 121, 218) 100%);
   box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
   padding: 15px 40px 15px 40px;
+  transition: box-shadow 1s;
+}
+.resa .btn:hover {
+  filter: brightness(150%);
+  box-shadow: 0px 10px 17px 6px rgba(0, 0, 0, 0.25);
 }
 
+/*section choix du resto*/
+.choix {
+  padding: 10px;
+}
+.choix .bloc {
+  margin-left: -15px;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  border-radius: 15px;
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
+}
 .choix .bloc .icon--store, .choix .bloc .icon--list, .choix .bloc .icon--phone {
   color: gray;
   padding-top: 15px;
 }
-
 .choix .bloc .bloc--texte {
   font-weight: bold;
 }
-
 .choix .bulle {
+  z-index: 1;
+  font-weight: bold;
   width: 45px;
+  min-width: 45px;
   height: 45px;
   border-radius: 50%;
   background-color: #9356DC;
 }
-/*# sourceMappingURL=style.css.map */
+.choix .bulle bulle--texte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
