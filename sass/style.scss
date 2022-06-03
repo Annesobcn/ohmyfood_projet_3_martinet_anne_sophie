@@ -57,8 +57,25 @@ header {
 }
     /*section choix du resto*/
     .choix {
-  
+        display: flex;
         padding: 10px;
+        .bulle{
+            z-index: 1;
+            font-weight: bold;
+            width: 45px;
+            min-width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: $couleurprimaire;
+             .bulle--texte{
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                     color: white;
+                     font-weight: bold;   
+             }
+            }
+
         .bloc{
             margin-left: -15px;
             display: flex;
@@ -67,6 +84,7 @@ header {
             border-radius: 15px;
             background-color:rgb(246, 246, 246);
             box-shadow: 0px 10px 12px -4px rgba(0,0,0,0.4);
+        }
             .icon--store, .icon--list, .icon--phone{
                 color: gray;
                 padding-top: 15px;
@@ -75,24 +93,9 @@ header {
                     font-weight: bold;
                 }
             }
-            .bulle{
-               z-index: 1;
-               font-weight: bold;
-               width: 45px;
-               min-width: 45px;
-               height: 45px;
-               border-radius: 50%;
-               background-color: $couleurprimaire;
-                bulle--texte{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                        color: white;
-                        font-weight: bold;
-                    
-                }
+            
                
               
-            }
-        }
+            
+        
     
