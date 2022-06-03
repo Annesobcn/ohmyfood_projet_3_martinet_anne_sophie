@@ -62,6 +62,10 @@ header {
 }
 
 /*section choix du resto*/
+.fonctionnement {
+  padding-bottom: 40px;
+}
+
 .choix {
   display: flex;
   padding: 10px;
@@ -90,6 +94,9 @@ header {
   border-radius: 15px;
   background-color: rgb(246, 246, 246);
   box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
+}
+.choix .bloc:hover {
+  background-color: #e3cdff;
 }
 .choix .icon--store, .choix .icon--list, .choix .icon--phone {
   color: gray;
