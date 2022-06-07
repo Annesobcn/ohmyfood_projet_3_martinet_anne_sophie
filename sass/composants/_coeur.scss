@@ -1,12 +1,17 @@
 @mixin coeur-style{
-    
-    .material-symbols-outlined {
-      font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 48
-    }
+    font-size: 32px;
+    -webkit-text-fill-color: white;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
+}
+
+@mixin coeur-style-hover{
+  
+  color: #9356DC;
+  display: block;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
     
 
 } 

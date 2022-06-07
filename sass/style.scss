@@ -106,7 +106,6 @@ header {
                 padding-top: 20px;
                 background-color: rgb(246, 246, 246);
                 .menulink, a {
-    
                     text-decoration: none;
                     color: inherit;
                 } 
@@ -136,9 +135,12 @@ img {
 .card--texte{
       display: flex;
       flex-direction: column;
-     
  .coeur{
+    padding: 25px 25px 0 0;
      @include coeur-style;
+     & :hover{
+         @include coeur-style-hover;
+     }
  } 
 }
 .choix-resto {

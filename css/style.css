@@ -142,8 +142,19 @@ header {
   display: flex;
   flex-direction: column;
 }
-.pres--card .card--texte .coeur .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+.pres--card .card--texte .coeur {
+  padding: 25px 25px 0 0;
+  font-size: 32px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.pres--card .card--texte .coeur :hover {
+  color: #9356DC;
+  display: block;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .pres--card .choix-resto {
   display: flex;
