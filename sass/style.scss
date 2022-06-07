@@ -1,6 +1,7 @@
 @import "./utils/variables.scss";
 @import "./composants/btn.scss";
 @import "./composants/coeur";
+@import ".layouts/footer";
 
 body {
     margin: 0;
@@ -135,17 +136,23 @@ img {
 .card--texte{
       display: flex;
       flex-direction: column;
- .coeur{
-    padding: 25px 25px 0 0;
-     @include coeur-style;
-     & :hover{
+}
+.coeur{
+      padding: 25px 25px 0 0;
+      @include coeur-style;
+      &:hover{
          @include coeur-style-hover;
      }
  } 
-}
+
 .choix-resto {
     display: flex;
     justify-content: space-between;
    
 }
+}
+/* footer***/
+footer{ 
+    background-color: black;
+    @include footer-style;
 }
