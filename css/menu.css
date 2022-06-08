@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+}
+
+header {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+header .header-menu {
+  display: flex;
+  align-items: flex-start;
+}
+header .header-menu i {
+  font-size: 1.5em;
+}
+header .header-menu img {
+  padding-left: 50px;
+}/*# sourceMappingURL=menu.css.map */

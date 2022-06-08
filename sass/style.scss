@@ -2,6 +2,9 @@
 @import "./composants/btn.scss";
 @import "./composants/coeur";
 @import "./layouts/footer";
+@import "./layouts/localistation";
+@import "./layouts/header";
+@import "./layouts/nouveau";
 
 body {
     margin: 0;
@@ -10,27 +13,11 @@ body {
 }
 
 header {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    @include header-style;
 }
 /*section localisation*/
-.localisation {
-    -webkit-box-shadow: inset 0px 4px 16px -11px rgba(0,0,0,0.98); 
-    box-shadow: inset 0px 4px 16px -11px rgba(0,0,0,0.98);
-    padding: 20px 10px 15px 20px;
-    background-color: rgb(241, 239, 239);
-    .recherche {
-        display: flex;
-        justify-content: center;
-    }
-    .champsderecherche{
-        border: none;
-        font-weight: bold;
-        padding-left: 10px;
-        background-color:rgb(241, 239, 239) ;
-    }
+.localisation{
+@include localistation;
 }
 /*section reservation*/
 .resa {
@@ -81,7 +68,7 @@ header {
                      font-weight: bold;   
              }
             }
-
+/**bloc contenant bulle numérotée et case de choix*/ 
         .bloc{
             margin-left: -15px;
             display: flex;
@@ -121,13 +108,12 @@ header {
     padding-bottom: 10px;
     position: relative;
     .new{
-        position: absolute;
-        top: 10px;
-        right: 15px;
+        @include nouveau-sticker;
     }
 
 img {
     width: 100%;
+    height: 276px ;
     object-fit: cover;
     object-position: center;
     border-radius: 15px 15px 0px 0px ;
@@ -136,9 +122,15 @@ img {
 .card--texte{
       display: flex;
       flex-direction: column;
+      .choix-resto h2{
+          margin-bottom: 0;
+      }
+      .lieu p{
+          margin-top: 0;
+      }
 }
 .coeur{
-      padding: 25px 25px 0 0;
+      padding: 15px 25px 0 0;
       @include coeur-style;
       &:hover{
          @include coeur-style-hover;
@@ -152,6 +144,6 @@ img {
 }
 }
 /* footer***/
-.footer-box{
+footer {
     @include footer-style;
 }

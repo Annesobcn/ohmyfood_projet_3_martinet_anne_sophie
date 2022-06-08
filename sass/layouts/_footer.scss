@@ -3,11 +3,33 @@
     .footer-box{
         background-color: black;
         color: white;
+        padding: 25px 15px 25px 15px;
+         img {
+            filter: invert(100%);
+            -webkit-filter: invert(100%);
+            padding: 10px 0 25px 0;
+        }
         .prop-line{
             display: flex;
+            p{
+            padding-left: 10px;
+            }
         }
         .part-line{
             display: flex;
+            i::before{
+                font-size: small;
+            }
+            p{
+                padding-left: 10px;
+                }
+        }
+        p {
+            margin-top: 0;
+        }
+        a{
+            text-decoration: none;
+            color: white;
         }
     }
 

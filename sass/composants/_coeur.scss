@@ -6,10 +6,10 @@
 }
 
 @mixin coeur-style-hover{
-  
   color: #9356DC;
   display: block;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+-webkit-text-stroke-color: transparent;
 } 

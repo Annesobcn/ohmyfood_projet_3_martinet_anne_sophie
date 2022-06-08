@@ -1,17 +1,4 @@
 @charset "UTF-8";
-body {
-  margin: 0;
-  font-family: "roboto", sans-serif;
-}
-
-header {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-
-/*section localisation*/
 .localisation {
   box-shadow: inset 0px 4px 16px -11px rgba(0, 0, 0, 0.98);
   padding: 20px 10px 15px 20px;
@@ -28,6 +15,19 @@ header {
   background-color: rgb(241, 239, 239);
 }
 
+body {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+}
+
+header {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/*section localisation*/
 /*section reservation*/
 .resa {
   display: flex;
@@ -69,6 +69,7 @@ header {
 .choix {
   display: flex;
   padding: 10px;
+  /**bloc contenant bulle numérotée et case de choix*/
 }
 .choix .bulle {
   z-index: 1;
@@ -129,9 +130,15 @@ header {
   position: absolute;
   top: 10px;
   right: 15px;
+  background-color: #99E2D0;
+  color: #06bfaa;
+  font-weight: bold;
+  padding: 10px 10px 5px 10px;
+  border-radius: 5px;
 }
 .pres--card img {
   width: 100%;
+  height: 276px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -142,8 +149,14 @@ header {
   display: flex;
   flex-direction: column;
 }
+.pres--card .card--texte .choix-resto h2 {
+  margin-bottom: 0;
+}
+.pres--card .card--texte .lieu p {
+  margin-top: 0;
+}
 .pres--card .coeur {
-  padding: 25px 25px 0 0;
+  padding: 15px 25px 0 0;
   font-size: 32px;
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
@@ -155,6 +168,7 @@ header {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
 }
 .pres--card .choix-resto {
   display: flex;
@@ -162,13 +176,35 @@ header {
 }
 
 /* footer***/
-.footer-box .footer-box {
+footer .footer-box {
   background-color: black;
   color: white;
+  padding: 25px 15px 25px 15px;
 }
-.footer-box .footer-box .prop-line {
+footer .footer-box img {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  padding: 10px 0 25px 0;
+}
+footer .footer-box .prop-line {
   display: flex;
 }
-.footer-box .footer-box .part-line {
+footer .footer-box .prop-line p {
+  padding-left: 10px;
+}
+footer .footer-box .part-line {
   display: flex;
+}
+footer .footer-box .part-line i::before {
+  font-size: small;
+}
+footer .footer-box .part-line p {
+  padding-left: 10px;
+}
+footer .footer-box p {
+  margin-top: 0;
+}
+footer .footer-box a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

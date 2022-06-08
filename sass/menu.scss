@@ -1,0 +1,26 @@
+@import "./utils/variables.scss";
+@import "./composants/btn.scss";
+@import "./composants/coeur";
+@import "./layouts/footer";
+@import "./layouts/header.scss";
+
+
+body {
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+   
+}
+
+header {
+    @include header-style;
+    .header-menu{
+        display: flex;
+        align-items: flex-start;
+   i{
+       font-size: 1.5em;
+   }
+   img {
+       padding-left: 50px;
+   }
+}
+}
