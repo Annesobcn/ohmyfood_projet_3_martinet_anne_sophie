@@ -68,42 +68,49 @@ header {
 
 .choix {
   display: flex;
-  padding: 10px;
-  /**bloc contenant bulle numérotée et case de choix*/
-}
-.choix .bulle {
-  z-index: 1;
-  font-weight: bold;
-  width: 45px;
-  min-width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #9356DC;
-}
-.choix .bulle .bulle--texte {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-}
-.choix .bloc {
-  margin-left: -15px;
-  display: flex;
-  justify-content: space-around;
-  width: 90%;
-  border-radius: 15px;
   background-color: rgb(246, 246, 246);
   box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  width: 300px;
+  margin: auto;
+  height: 80px;
+  position: relative;
+  margin-top: 30px;
 }
-.choix .bloc:hover {
+.choix .bulle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/**bloc contenant bulle numérotée et case de choix*/
+.bloc {
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  padding-right: 10px;
+}
+.bloc:hover {
   background-color: #e3cdff;
 }
-.choix .icon--store, .choix .icon--list, .choix .icon--phone {
+
+.fa-mobile-screen, .fa-list, .fa-store {
   color: gray;
   padding-top: 15px;
+  font-size: 1.5em;
+  padding: 10px 30px 15px 0;
 }
-.choix .bloc--texte {
+
+.bloc--texte {
   font-weight: bold;
 }
 
