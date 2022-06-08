@@ -1,7 +1,14 @@
+
 @mixin footer-style {
     .footer-box{
         background-color: black;
         color: white;
+        .prop-line{
+            display: flex;
+        }
+        .part-line{
+            display: flex;
+        }
     }
 
 }

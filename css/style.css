@@ -159,4 +159,16 @@ header {
 .pres--card .choix-resto {
   display: flex;
   justify-content: space-between;
+}
+
+/* footer***/
+.footer-box .footer-box {
+  background-color: black;
+  color: white;
+}
+.footer-box .footer-box .prop-line {
+  display: flex;
+}
+.footer-box .footer-box .part-line {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

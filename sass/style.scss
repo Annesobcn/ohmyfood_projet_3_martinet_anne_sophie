@@ -1,7 +1,7 @@
 @import "./utils/variables.scss";
 @import "./composants/btn.scss";
 @import "./composants/coeur";
-@import ".layouts/footer";
+@import "./layouts/footer";
 
 body {
     margin: 0;
@@ -152,7 +152,6 @@ img {
 }
 }
 /* footer***/
-footer{ 
-    background-color: black;
+.footer-box{
     @include footer-style;
 }
