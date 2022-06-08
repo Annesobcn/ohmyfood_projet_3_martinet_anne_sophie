@@ -138,10 +138,15 @@ img {
 .coeur{
       padding: 15px 25px 0 0;
       @include coeur-style;
-      &:hover{
-         @include coeur-style-hover;
      }
- } 
+     .fa-solid{
+         @include coeur-plain;
+     }
+     .coeur:hover .fa-solid{
+         transform: scale(1);
+         transition-duration: 1s;
+     }
+  
 
 .choix-resto {
     display: flex;

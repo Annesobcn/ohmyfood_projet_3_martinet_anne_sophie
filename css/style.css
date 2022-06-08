@@ -166,16 +166,22 @@ header {
   padding: 15px 25px 0 0;
   font-size: 32px;
   -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.3px;
   -webkit-text-stroke-color: black;
+  position: relative;
 }
-.pres--card .coeur:hover {
+.pres--card .fa-solid {
+  position: absolute;
+  transform: scale(0);
   color: #9356DC;
-  display: block;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: transparent;
+}
+.pres--card .coeur:hover .fa-solid {
+  transform: scale(1);
+  transition-duration: 1s;
 }
 .pres--card .choix-resto {
   display: flex;
