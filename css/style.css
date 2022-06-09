@@ -166,10 +166,10 @@ header {
 }
 .pres--card .coeur {
   padding: 15px 25px 0 0;
-  font-size: 32px;
+  font-size: 30px;
   -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #9356DC;
   position: relative;
 }
 .pres--card .fa-solid {
