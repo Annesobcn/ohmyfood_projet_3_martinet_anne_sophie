@@ -84,30 +84,35 @@ h2{
   padding-top: 15px;
   padding-bottom: 15px;
   opacity:0;
-    -moz-animation: anim 3s linear forwards 5s;
-    -webkit-animation: anim 3s linear forwards 5s;
-    -o-animation: anim 3s linear forwards 5s;
-    -ms-animation: anim 3s linear forwards 5s;
-    animation: anim 3s linear forwards 5s;
+    -moz-animation: anim 2s linear forwards 5s;
+    -webkit-animation: anim 2s linear forwards 5s;
+    -o-animation: anim 2s linear forwards 5s;
+    -ms-animation: anim 2s linear forwards 5s;
+    animation: anim 2s linear forwards 5s;
 }
 @-moz-keyframes anim {
   0%  {opacity:0;}
+  50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 @-webkit-keyframes anim {
   0%  {opacity:0;}
+  50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 @-o-keyframes anim {
   0%  {opacity:0;}
+  50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 @-ms-keyframes anim {
   0%  {opacity:0;}
+  50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 @keyframes anim {
   0%  {opacity:0;}
+  50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 .plat{
@@ -130,6 +135,30 @@ p{
 .prix{
   font-weight: bold;
 }
+.bouton{
+  height: 70px;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  align-items: center;
+  padding-bottom: 55px;
+}
+.btn{
+  width: fit-content;
+  margin-left: 30%;
+  text-decoration: none;
+  border-radius: 25px 25px 25px 25px;
+  padding: 15px;
+  color: white;
+  background: rgb(147,86,220);
+  background: linear-gradient(353deg, rgba(147,86,220,1) 36%, rgba(255,121,218,1) 79%, rgba(255,121,218,1) 100%);
+  box-shadow: 0px 10px 12px -4px rgba(0,0,0,0.4);
+  padding:15px 40px 15px 40px ;
+  transition: box-shadow 1s;
+}
+.btn:hover {
+  filter: brightness(150%);
+  box-shadow: 0px 10px 17px 6px rgba(0,0,0,0.25);
+      }
 /***footer***/
 .footer-box{
   background-color: black;
@@ -150,7 +179,7 @@ p{
 .part-line{
   display: flex;
 }
-  i::before{
+  part-line i::before{
       font-size: small;
   }
  
@@ -162,4 +191,5 @@ p{
         color: white;
         padding-left: 5px;
     }
+
 /*# sourceMappingURL=menu.css.map */
