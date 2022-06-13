@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Oh my food</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,25 +22,117 @@
     <!--header logo accueil-->
     <header>
         <div class="header-menu">
-        <i class="fa-solid fa-arrow-left"></i>
-        <img src="img/logo/ohmyfood@2x.svg" alt="logo">
+       <a class="fleche" href="/index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <img class="logo" src="img/logo/ohmyfood@2x.svg" alt="logo">
     </div>
     </header>
-    <!--Pres-resto-->
-    <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le Délice des sens">
-    <!--carte-->
     <main>
-        <div class="menu">
+    <!--Pres-resto-->
+    <div class="imageresto">
+    <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
+    </div>
+    <!--carte-->
+    
+        <section class="menu">
+            <div class="titremenu">
             <h1>Le délice des sens</h1>
             <div class="coeur">
                 <i class="fa-solid fa-heart"></i>
+                <i class="fa-regular fa-heart"></i>
             </div>
         </div>
         <!--Entrées-->
-        <h2 class:"plats">Entrées</h2>
+        <h2 class="plats">Entrées<div class="underline">&nbsp;</div></h2>
+<div class="bloc-entrees">
+    <div class="plat">
+    <div class="texte">
+        <h3>Tartare de thon</h3>
+        <p>Assaisonné au yuzu</p>
+    </div>
+        <div class="prix">25€</div>
+    </div>
+    <div class="plat">
+        <div class="texte">
+        <h3>Bouchée de homard croustillant</h3>
+        <p>Et sa farandole de petits légumes</p>
+        </div>
+        <div class="prix">35€</div>
+    </div>
+    <div class="plat">
+        <div class="texte">
+        <h3>Velouté de cèpes</h3>
+        <p>Aux truffes</p>    
+        </div>    
+        <div class="prix">20€</div>
+    </div>
+    <h2 class="plats">Plats<div class="underline">&nbsp;</div></h2>
 <div class="bloc-plats">
-    
+    <div class="plat">
+        <div class="texte">
+        <h3>Poulet rôti aux herbes de Provence </h3>
+        <p>Et sa crème de truffe</p>
+        </div>
+        <div class="prix">40€</div>
+    </div>
+    <div class="plat">
+        <div class="texte">
+        <h3>Langouste rôtie </h3>
+        <p>Et ses légumes de saison</p>
+        </div>
+        <div class="prix">35€</div>
+    </div>
+    <div class="plat">
+        <div class="texte">
+        <h3>Côte de boeuf Angus</h3>
+        <p>Et sa purée de panais</p>
+        </div>
+        <div class="prix">44€</div>
+    </div>
 </div>
+<h2 class="plats">Desserts<div class="underline">&nbsp;</div></h2>
+<div class="bloc-desserts">
+    <div class="plat">
+        <div class="texte">
+        <h3>Farandole de desserts</h3>
+        <p>Du chef</p>
+        </div>
+        <div class="prix">18€</div>
+    </div>
+    <div class="plat">
+        <div class="texte">
+        <h3>Crème brulée </h3>
+        <p>Revisitée</p>
+        </div>
+        <div class="prix">22€</div>
+    </div>
+    <div class="plat">
+        <div class="texte">
+        <h3>Tiramisu</h3>
+        <p>À la noisette</p>
+        </div>
+        <div class="prix">23€</div>
+    </div>
+    </section>
+    <!--bouton animé-->
+ <div class="bouton">
+    <a href="#" class="btn">Commander</a>
+</div>
+
     </main>
+    <footer>
+        <div class="footer-box">
+        <img src="img/logo/ohmyfood@2x.svg" alt="logo">
+            <div class="prop-line">
+            <i class="fa-solid fa-utensils"></i>
+            <p>Proposer un restaurant</p>
+        </div>
+        <div class="part-line">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <p>Devenir partenaire</p>
+        </div>
+            <p>Mentions légales</p>
+            <a href="mailto:contact@ohmyfood.fr">Contact</a>
+        </div>       
+    </footer>
     </body>
     </html>
