@@ -34,9 +34,9 @@ header .titremenu img {
 }
 
 .menu {
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background-color: rgb(246, 246, 246);
-  padding: 25px 0px 0px 0px;
+  padding: 25px 0px 25px 0px;
   margin-top: -55px;
   position: relative;
 }
@@ -79,39 +79,39 @@ h2{
   border-bottom:3px solid #99E2D0;
   overflow:hidden;
 }
-.bloc-entrees{
+.bloc-entrees, .bloc-plats, .bloc-desserts{
   background-color: rgb(246, 246, 246);
   padding-top: 15px;
   padding-bottom: 15px;
   opacity:0;
-    -moz-animation: anim 2s linear forwards 5s;
-    -webkit-animation: anim 2s linear forwards 5s;
-    -o-animation: anim 2s linear forwards 5s;
-    -ms-animation: anim 2s linear forwards 5s;
-    animation: anim 2s linear forwards 5s;
+    -moz-animation: anim 1s linear forwards 1s;
+    -webkit-animation: anim 1s linear forwards 1s;
+    -o-animation: anim 1s linear forwards 1s;
+    -ms-animation: anim 1s linear forwards 1s;
+    animation: anim 1s linear forwards 1s;
 }
 @-moz-keyframes anim {
-  0%  {opacity:0;}
+  0%  {opacity:0.2;}
   50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 @-webkit-keyframes anim {
-  0%  {opacity:0;}
+  0%  {opacity:0.2;}
   50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 @-o-keyframes anim {
-  0%  {opacity:0;}
+  0%  {opacity:0.2;}
   50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 @-ms-keyframes anim {
-  0%  {opacity:0;}
+  0%  {opacity:0.2;}
   50% {opacity: 0.5;}
   100% {opacity:1;}
 }
 @keyframes anim {
-  0%  {opacity:0;}
+  0%  {opacity:0.2;}
   50% {opacity: 0.5;}
   100% {opacity:1;}
 }
@@ -119,12 +119,38 @@ h2{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: white;
   box-shadow: 0px 8px 12px 4px rgba(0,0,0,0.20);
-  padding: 15px;
-  margin: 25px;
+  padding: 10px;
+  margin: 15px;
 }
+.inputbtn{
+  width: 60px;
+  height: 60px;
+}
+.plat checkbox :hover{
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari et Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    background-color: white;
+    opacity:0;
+}
+to {
+  width: 20%;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+    opacity:1;
+}
+}
+
+
+   
+
 h3{
   margin: 5px;
 }

@@ -1,5 +1,5 @@
-@mixin coeur-style{font-size: 30px;
-  position: relative;
+@mixin coeur-style{
+  font-size: 30px;
   margin-right: 25px;
 position: relative;
 }
@@ -11,7 +11,6 @@ position: relative;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0px 0px 1px -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
 -webkit-text-stroke-color: transparent;
 } 
