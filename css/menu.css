@@ -44,12 +44,12 @@ header .titremenu img {
   font-family: shrikhand;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:center;
 }
 .coeur{
   font-size: 30px;
-position: relative;
-margin-right: 25px;
+  position: relative;
+  margin-right: 25px;
 }
 .coeur .fa-solid{
   position: absolute;
@@ -116,6 +116,7 @@ h2{
   100% {opacity:1;}
 }
 .plat{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -124,24 +125,36 @@ h2{
   box-shadow: 0px 8px 12px 4px rgba(0,0,0,0.20);
   padding: 10px;
   margin: 15px;
+  transition-duration: 3s;
 }
 .inputbtn{
-  width: 60px;
-  height: 60px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
-.plat checkbox :hover{
-  animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari et Chrome */
-    -o-animation: fadein 2s; /* Opera */
+.checkbox{
+display: flex;
+align-items: center;
+justify-content: center;
+  background-color: #99E2D0;
+  color: white;
+  width: 70px;
+  height: 75px;
+  border-radius: 0 15px 15px 0;
 }
-@keyframes fadein {
+
+.checkbox:hover {
+  animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari et Chrome */
+    -o-animation: fadein 3s; /* Opera */
+}
+@keyframes fadein{
   from {
     background-color: white;
     opacity:0;
 }
 to {
-  width: 20%;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
     opacity:1;
