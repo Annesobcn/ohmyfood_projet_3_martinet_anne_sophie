@@ -4,3 +4,6 @@
     justify-content: center;
     padding: 10px;
 }
+@mixin header-bigger {
+    transform: scale(1.9);
+}

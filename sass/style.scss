@@ -1,203 +1,21 @@
 @import "./utils/variables.scss";
+@import "./pages/accueil.scss";
 @import "./composants/btn.scss";
 @import "./composants/coeur";
 @import "./layouts/footer";
 @import "./layouts/localistation";
 @import "./layouts/header";
 @import "./layouts/nouveau";
+@import "./pages/menu";
+@import "./layouts/loadingspinner";
+
 
 body {
-    margin: 0;
     font-family: 'roboto', sans-serif;
-   
+    cursor:auto;
+    @include loading-page;
 }
 
 header {
     @include header-style;
-}
-/*section localisation*/
-.localisation{
-@include localistation;
-}
-/*section reservation*/
-.resa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(246, 246, 246);
-    padding: 15px 0 55px 0;
-    .resa__titre {
-        flex-wrap: wrap;
-            text-align: center;
-    }
-    .resa__texte {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-/*bouton animé*/
-.btn {
-     @include btn-style;
-
-    &:hover {
-        filter: brightness(150%);
-        box-shadow: 0px 10px 17px 6px rgba(0,0,0,0.25);
-            }
-    }
-}
-    /*section choix du resto*/
-    .fonctionnement {
-        padding-bottom: 40px;
-    }
-    .choix {
-        display: flex;
-        align-items: center;
-        background-color:rgb(246, 246, 246);
-            box-shadow: 0px 10px 12px -4px rgba(0,0,0,0.4);
-            border-radius: 25px;
-            width: 300px;
-            margin: auto;
-            height: 80px;
-            position: relative;
-            margin-top: 30px;
-            &:hover{
-                background-color: $couleurprimairefade;
-            }
-        .bulle{
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: $couleurprimaire;
-            font-weight: bold;
-            color: white;
-            position: absolute;
-            left: 0;
-            margin-left: -10px;
-            text-align: center;
-            line-height: 30px;
-                }
-            }
-/**bloc contenant bulle numérotée et case de choix*/ 
-        .bloc{
-            display: flex;
-            align-items: center;
-            padding-left: 35px;
-            padding-right: 10px;
-            
-           
-        }
-            .fa-mobile-screen, .fa-list, .fa-store{
-                color: gray;
-                padding-top: 15px;
-                font-size: 1.5em;
-                padding:  10px 30px 15px 0;
-            
-            &:hover{
-                color: $couleurprimaire;
-            }
-        }
-                .bloc--texte {
-                    font-weight: bold;
-                }
-            
-            /***section Restaurants***/
-            .restos{
-                padding: 20px 15px 15px 15px;
-                background-color: rgb(246, 246, 246);
-                .menulink, a {
-                    text-decoration: none;
-                    color: inherit;
-                } 
-            
-        }
-.pres--card {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 25px;
-    width: 100%;
-    margin-bottom: 25px;
-    position: relative;
-    .new{
-        @include nouveau-sticker;
-    }
-
-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 25px 25px 0px 0px ;
-}
-
-.card--texte{
-      display: flex;
-      flex-direction: column;
-      padding-left: 15px;
-      .choix-resto h2{
-          margin-bottom: 0;
-      }
-      .lieu p{
-          margin-top: 0;
-      }
-}
-.coeur{
-      padding: 15px 25px 0 0;
-      @include coeur-style;
-     }
-     .fa-solid{
-         @include coeur-plain;
-     }
-     .coeur:hover .fa-solid{
-         transform: scale(1);
-         transition-duration: 1s;
-     }
-  
-
-.choix-resto {
-    display: flex;
-    justify-content: space-between;
-   
-}
-}
-/* footer***/
-footer {
-    @include footer-style;
-}
-/**********VERSION TABLETTES**********/ 
-@media all and (min-width:768px){
-    /***fonctionnement***/ 
-.container--bloc{
-    display: flex;
-    flex-wrap: wrap;
-    .bloc{
-        margin: 10px;
-    }
-}
-/***restaurants***/ 
-.resto--card{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    .menulink{
-        margin: 10px;
-    }
-    .pres--card{
-    width: 350px;
-    img{
-        height: 270px;
-    }
-    }
-   .footer-box{
-       display: flex;
-   } 
-}
-}
-@media all and (min-width:992px){
-    /***restaurants***/ 
-.resto--card{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
 }

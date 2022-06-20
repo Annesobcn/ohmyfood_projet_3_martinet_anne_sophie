@@ -116,21 +116,25 @@ h2{
   100% {opacity:1;}
 }
 .plat{
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   border-radius: 15px;
   background-color: white;
+  width: 80%;
+  overflow: hidden;
+  cursor: pointer;
   box-shadow: 0px 8px 12px 4px rgba(0,0,0,0.20);
-  padding: 10px;
-  margin: 15px;
-  transition-duration: 3s;
+  margin: auto;
+  margin-top: 15px;
 }
-.inputbtn{
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.texte{
+  width: 130px;
+  flex-grow: 1;
+}
+.prix{
+  align-self: flex-end;
+  padding-bottom: 15px;
+  margin-right: 15px;
 }
 .checkbox{
 display: flex;
@@ -138,31 +142,15 @@ align-items: center;
 justify-content: center;
   background-color: #99E2D0;
   color: white;
-  width: 70px;
+  width: 0;
   height: 75px;
   border-radius: 0 15px 15px 0;
+  transition: 1s;
 }
-
-.checkbox:hover {
-  animation: fadein 3s;
-    -moz-animation: fadein 3s; /* Firefox */
-    -webkit-animation: fadein 3s; /* Safari et Chrome */
-    -o-animation: fadein 3s; /* Opera */
+.plat:hover .checkbox{
+width: 70px;
 }
-@keyframes fadein{
-  from {
-    background-color: white;
-    opacity:0;
-}
-to {
-  border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
-    opacity:1;
-}
-}
-
-
-   
+  
 
 h3{
   margin: 5px;

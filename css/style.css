@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 .localisation {
   box-shadow: inset 0px 4px 16px -11px rgba(0, 0, 0, 0.98);
   padding: 20px 10px 15px 20px;
@@ -256,6 +256,7 @@ footer .footer-box a {
   }
 }
 @media all and (min-width: 992px) {
+  
   /***restaurants***/
   .resto--card {
     display: flex;
