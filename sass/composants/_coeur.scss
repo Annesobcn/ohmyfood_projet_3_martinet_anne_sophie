@@ -1,11 +1,6 @@
-@mixin coeur-style{
-  font-size: 30px;
-  margin-right: 25px;
-position: relative;
-cursor: pointer;
-}
 
-@mixin coeur-plain{
+
+.pres--card .coeur .fa-solid{
   position: absolute;
   transform: scale(0);
   color: #9356DC;

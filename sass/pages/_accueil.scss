@@ -1,14 +1,14 @@
-@import "/sass/utils/variables";
-@import "/sass/layouts/header";
 @import "/sass/composants/btn";
-@import "/sass/composants/coeur";
-@import "/sass/layouts/localistation";
-@import "/sass/layouts/loadingspinner2";
-@import "/sass/layouts/footer";
+@import "composants/coeur";
+@import "layouts/footer";
+@import "layouts/header";
+@import "layouts/loadingspinner1";
+@import "layouts/localisation";
+@import "utils/variables";
+
 
 body
-{   
-     @include loading-page2;
+{  
     animation: expand 3s ;
       overflow: hidden;
       &::after + .loading__text{
@@ -27,13 +27,8 @@ body
       }
     }
   
-  header {
-      @include header-style;
-  }
-/*section localisation*/
-.localisation{
-    @include localistation;
-    }
+
+/*section localisation
     /*section reservation*/
     .resa {
         display: flex;
@@ -48,16 +43,6 @@ body
         .resa__texte {
             flex-wrap: wrap;
             text-align: center;
-        }
-    
-    /*bouton animé*/
-    .btn {
-         @include btn-style;
-    
-        &:hover {
-            filter: brightness(150%);
-            box-shadow: 0px 10px 17px 6px rgba(0,0,0,0.25);
-                }
         }
     }
         /*section choix du resto*/
@@ -131,10 +116,7 @@ body
         width: 100%;
         margin-bottom: 25px;
         position: relative;
-        .new{
-            @include nouveau-sticker;
-        }
-    
+           
     img {
         width: 100%;
         height: 200px;
@@ -156,15 +138,16 @@ body
     }
     .coeur{
           padding: 15px 25px 0 0;
-          @include coeur-style;
-         }
-         .fa-solid{
-             @include coeur-plain;
-         }
-         .coeur:hover .fa-solid{
+          font-size: 30px;
+          margin-right: 25px;
+        position: relative;
+        cursor: pointer;
+         
+        &:hover .fa-solid{
              transform: scale(1);
              transition-duration: 1s;
          }
+        }
       
     
     .choix-resto {
@@ -173,10 +156,7 @@ body
        
     }
     }
-    /* footer***/
-    footer {
-        @include footer-style;
-    }
+
     /**********VERSION TABLETTES**********/ 
     @media all and (min-width:768px){
         /***fonctionnement***/ 
@@ -210,9 +190,9 @@ body
     /******VERSION DESKTOP*****/ 
     @media all and (min-width:992px){
      
-      header {
-        @include header-bigger;
-      }
+      header .logo {
+        transform: scale(1.9);
+    }
    /***restaurants***/ 
     .resto--card{
         display: flex;

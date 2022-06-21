@@ -1,9 +1,6 @@
-@mixin header-style {
+header {
     width: auto;
     display: flex;
     justify-content: center;
     padding: 10px;
-}
-@mixin header-bigger {
-    transform: scale(1.9);
 }

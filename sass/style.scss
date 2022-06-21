@@ -1,20 +1,13 @@
+@import "pages/accueil";
+@import "utils/variables";
 
-@import "./pages/accueil.scss";
-@import "./layouts/nouveau";
-@import "./pages/menu";
-@import "/sass/utils/variables";
-@import "/sass/layouts/header";
-@import "/sass/composants/btn";
-@import "/sass/composants/coeur";
-@import "/sass/layouts/localistation";
-@import "/sass/layouts/loadingspinner2";
-@import "/sass/layouts/footer";
 
 
 body {
     font-family: 'roboto', sans-serif;
     cursor:auto;
 }
+/*
 header {
     @include header-style;
-}
+}*/
