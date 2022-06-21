@@ -1,11 +1,10 @@
-@import "./utils/variables.scss";
-@import "./pages/accueil";
-@import "./composants/btn.scss";
-@import "./composants/coeur";
-@import "./layouts/footer";
-@import "./layouts/localistation";
-@import "./layouts/header";
-@import "./layouts/loadingspinner2.scss";
+@import "/sass/utils/variables";
+@import "/sass/layouts/header";
+@import "/sass/composants/btn";
+@import "/sass/composants/coeur";
+@import "/sass/layouts/localistation";
+@import "/sass/layouts/loadingspinner2";
+@import "/sass/layouts/footer";
 
 body
 {   
@@ -76,9 +75,13 @@ body
                 height: 80px;
                 position: relative;
                 margin-top: 30px;
-                &:hover > .bloc i{
-                    color: $couleurprimairefade;
+                cursor: pointer;
+                &:hover{
+                    background-color: $couleurprimairefade;
+                & .bloc> i{
+                    color: $couleurprimaire;
                 }
+            }
             .bulle{
                 width: 30px;
                 height: 30px;
@@ -99,18 +102,12 @@ body
                 align-items: center;
                 padding-left: 35px;
                 padding-right: 10px;
-                
-               
             }
                 .fa-mobile-screen, .fa-list, .fa-store{
                     color: gray;
                     padding-top: 15px;
                     font-size: 1.5em;
                     padding:  10px 30px 15px 0;
-                
-                &:hover{
-                    color: $couleurprimaire;
-                }
             }
                     .bloc--texte {
                         font-weight: bold;
@@ -210,6 +207,7 @@ body
        } 
     }
     }
+    /******VERSION DESKTOP*****/ 
     @media all and (min-width:992px){
      
       header {
@@ -220,5 +218,9 @@ body
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+    }
+    /***footer***/
+    .footer-box{
+        display: flex;
     }
     }

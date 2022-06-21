@@ -1,41 +1,20 @@
-@import "./utils/variables.scss";
+
 @import "./pages/accueil.scss";
-@import "./composants/btn.scss";
-@import "./composants/coeur";
-@import "./layouts/footer";
-@import "./layouts/localistation";
-@import "./layouts/header";
 @import "./layouts/nouveau";
 @import "./pages/menu";
-@import "./layouts/loadingspinner";
+@import "/sass/utils/variables";
+@import "/sass/layouts/header";
+@import "/sass/composants/btn";
+@import "/sass/composants/coeur";
+@import "/sass/layouts/localistation";
+@import "/sass/layouts/loadingspinner2";
+@import "/sass/layouts/footer";
 
 
 body {
     font-family: 'roboto', sans-serif;
     cursor:auto;
-    @include loading-page2;
-  animation-duration: 3s;
-  animation-name: expand;
-    overflow: hidden;
-    &::after{
-      display: none;
-      content: "";
-      &::after + .loading__text{
-        display: none;
-      }
-    }
 }
-
-@keyframes expand {
-    0% {
-      transform: translateX(1400px);
-    }
-
-    100% {
-      transform: translateX(0px);
-    }
-  }
-
 header {
     @include header-style;
 }

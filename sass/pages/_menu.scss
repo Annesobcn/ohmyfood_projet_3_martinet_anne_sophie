@@ -1,8 +1,10 @@
-@import "./utils/variables.scss";
-@import "./composants/btn.scss";
-@import "./composants/coeur";
-@import "./layouts/footer";
-@import "./layouts/header.scss";
+@import "/sass/utils/variables";
+@import "/sass/layouts/header";
+@import "/sass/composants/btn";
+@import "/sass/composants/coeur";
+@import "/sass/layouts/localistation";
+@import "/sass/layouts/loadingspinner2";
+@import "/sass/layouts/footer";
 
 
 body {

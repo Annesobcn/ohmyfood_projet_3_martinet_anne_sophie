@@ -84,11 +84,28 @@ h2{
   padding-top: 15px;
   padding-bottom: 15px;
   opacity:0;
+}
+  .bloc-entrees{
     -moz-animation: anim 1s linear forwards 1s;
     -webkit-animation: anim 1s linear forwards 1s;
     -o-animation: anim 1s linear forwards 1s;
     -ms-animation: anim 1s linear forwards 1s;
     animation: anim 1s linear forwards 1s;
+}
+.bloc-plats{
+  -moz-animation: anim 1s linear forwards 2s;
+  -webkit-animation: anim 1s linear forwards 2s;
+  -o-animation: anim 1s linear forwards 2s;
+  -ms-animation: anim 1s linear forwards 2s;
+  animation: anim 1s linear forwards 2s;
+}
+.bloc-desserts{
+  
+  -moz-animation: anim 1s linear forwards 3;
+  -webkit-animation: anim 1s linear forwards 3;
+  -o-animation: anim 1s linear forwards 3;
+  -ms-animation: anim 1s linear forwards 3;
+  animation: anim 1s linear forwards 3;
 }
 @-moz-keyframes anim {
   0%  {opacity:0.2;}
