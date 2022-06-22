@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .footer-box {
   background-color: black;
   color: white;
@@ -39,11 +40,313 @@ header {
 }
 
 body {
-  font-family: "roboto", sans-serif;
-  cursor: auto;
+  -webkit-animation: expand 3s;
+          animation: expand 3s;
+  overflow: hidden;
+}
+body::after + .loading__text {
+  display: none;
+  content: "";
 }
 
-/*
+@-webkit-keyframes expand {
+  0% {
+    transform: translateX(1);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/*section localisation
+    /*section reservation*/
+.resa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+  padding: 15px 0 55px 0;
+}
+.resa .resa__titre {
+  flex-wrap: wrap;
+  text-align: center;
+}
+.resa .resa__texte {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/*section choix du resto*/
+.fonctionnement {
+  padding-bottom: 40px;
+}
+
+.choix {
+  display: flex;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  width: 300px;
+  margin: auto;
+  height: 80px;
+  position: relative;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.choix:hover {
+  background-color: #e3cdff;
+}
+.choix:hover .bloc > i {
+  color: #9356DC;
+}
+.choix .bulle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/**bloc contenant bulle numérotée et case de choix*/
+.bloc {
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  padding-right: 10px;
+}
+
+.fa-mobile-screen, .fa-list, .fa-store {
+  color: gray;
+  padding-top: 15px;
+  font-size: 1.5em;
+  padding: 10px 30px 15px 0;
+}
+
+.bloc--texte {
+  font-weight: bold;
+}
+
+/***section Restaurants***/
+.restos {
+  padding: 20px 15px 15px 15px;
+  background-color: rgb(246, 246, 246);
+}
+.restos .menulink, .restos a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pres--card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 25px;
+  width: 100%;
+  margin-bottom: 25px;
+  position: relative;
+}
+.pres--card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 25px 25px 0px 0px;
+}
+.pres--card .card--texte {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+.pres--card .card--texte .choix-resto h2 {
+  margin-bottom: 0;
+}
+.pres--card .card--texte .lieu p {
+  margin-top: 0;
+}
+.pres--card .coeur {
+  padding: 15px 25px 0 0;
+  font-size: 30px;
+  margin-right: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.pres--card .coeur:hover .fa-solid {
+  transform: scale(1);
+  transition-duration: 1s;
+}
+.pres--card .choix-resto {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**********VERSION TABLETTES**********/
+@media all and (min-width: 768px) {
+  /***fonctionnement***/
+  .container--bloc {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container--bloc .bloc {
+    margin: 10px;
+  }
+
+  /***restaurants***/
+  .resto--card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .resto--card .menulink {
+    margin: 10px;
+  }
+  .resto--card .pres--card {
+    width: 350px;
+  }
+  .resto--card .pres--card img {
+    height: 270px;
+  }
+  .resto--card .footer-box {
+    display: flex;
+  }
+}
+/******VERSION DESKTOP*****/
+@media all and (min-width: 992px) {
+  header .logo {
+    transform: scale(1.9);
+  }
+
+  /***restaurants***/
+  .resto--card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  /***footer***/
+  .footer-box {
+    display: flex;
+  }
+}
+body {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+}
+
 header {
-    @include header-style;
-}*//*# sourceMappingURL=style.css.map */
+  width: auto;
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+}
+header .header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.fleche {
+  color: grey;
+  padding-right: 100px;
+}
+
+header .titremenu {
+  display: flex;
+}
+header .titremenu.titremenu img {
+  padding-left: 50%;
+}
+
+.imageresto img {
+  width: 100%;
+  height: 276px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  padding-left: 50px;
+}
+
+.menu {
+  border-radius: 20px;
+  background-color: rgb(246, 246, 246);
+  padding-top: 25px;
+  margin-top: -55px;
+  position: relative;
+}
+.menu .titremenu {
+  font-family: shrikhand;
+  display: flex;
+  justify-content: space-between;
+}
+.menu .titremenu .coeur {
+  font-size: 30px;
+  position: relative;
+  margin-right: 25px;
+}
+.menu .titremenu .coeur .fa-solid {
+  position: absolute;
+  transform: scale(0);
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 0px 1px -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+}
+.menu .titremenu .coeur:hover .fa-solid {
+  transform: scale(1);
+  transition-duration: 1s;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 25px 25px 25px 25px;
+  padding: 15px;
+  color: white;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(353deg, rgb(147, 86, 220) 36%, rgb(255, 121, 218) 79%, rgb(255, 121, 218) 100%);
+  box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
+  padding: 15px 40px 15px 40px;
+  transition: box-shadow 1s;
+  cursor: pointer;
+}
+.btn .btn:hover {
+  filter: brightness(150%);
+  box-shadow: 0px 10px 17px 6px rgba(0, 0, 0, 0.25);
+}
+
+.pres--card .coeur .fa-solid {
+  position: absolute;
+  transform: scale(0);
+  color: #9356DC;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  cursor: auto;
+}/*# sourceMappingURL=style.css.map */

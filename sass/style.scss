@@ -2,14 +2,14 @@
 @import "utils/variables";
 @import "layouts/footer";
 @import "layouts/header";
-
+@import "pages/accueil";
+@import "pages/menu";
+@import "composants/btn";
+@import "composants/coeur";
 
 
 body {
     font-family: 'roboto', sans-serif;
     cursor:auto;
 }
-/*
-header {
-    @include header-style;
-}*/
+
