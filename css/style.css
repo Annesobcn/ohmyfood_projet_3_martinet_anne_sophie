@@ -1,3 +1,43 @@
+.footer-box {
+  background-color: black;
+  color: white;
+  padding: 25px 15px 25px 15px;
+}
+.footer-box img {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  padding: 10px 0 25px 0;
+}
+.footer-box .prop-line {
+  display: flex;
+}
+.footer-box .prop-line p {
+  padding-left: 10px;
+}
+.footer-box .part-line {
+  display: flex;
+}
+.footer-box .part-line i::before {
+  font-size: small;
+}
+.footer-box .part-line p {
+  padding-left: 10px;
+}
+.footer-box p {
+  margin-top: 0;
+}
+.footer-box a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
 body {
   font-family: "roboto", sans-serif;
   cursor: auto;
