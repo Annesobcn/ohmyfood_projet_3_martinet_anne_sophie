@@ -7,15 +7,18 @@
             filter: invert(100%);
             -webkit-filter: invert(100%);
             padding: 10px 0 25px 0;
+            cursor: pointer;
         }
         .prop-line{
             display: flex;
+            cursor: pointer;
             p{
             padding-left: 10px;
             }
         }
         .part-line{
             display: flex;
+            cursor: pointer;
             i::before{
                 font-size: small;
             }
@@ -25,10 +28,13 @@
         }
         p {
             margin-top: 0;
+            margin-left: -1px;
+            cursor: pointer;
         }
         a{
             text-decoration: none;
             color: white;
         }
     }
+        
 

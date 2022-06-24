@@ -4,15 +4,17 @@
     box-shadow: inset 0px 4px 16px -11px rgba(0,0,0,0.98);
     padding: 20px 10px 15px 20px;
     background-color: rgb(241, 239, 239);
-    cursor: pointer;
     .recherche {
+        margin: auto;
         display: flex;
         justify-content: center;
+        padding-left:10%;
     }
     .champsderecherche{
         border: none;
         font-weight: bold;
         padding-left: 10px;
         background-color:rgb(241, 239, 239) ;
+        cursor: pointer;
     }
 }

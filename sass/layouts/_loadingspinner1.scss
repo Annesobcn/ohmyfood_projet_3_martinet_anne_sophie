@@ -1,10 +1,29 @@
-@import "utils/variables";
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
+  body
+{  
+    animation: expand 3s ;
+      overflow: hidden;
+      &::after + .loading__text{
+        display: none;
+        content: "";
+      }
+  }
+  
+  @keyframes expand {
+      0% {
+        transform: translateX(1);
+      }
+  
+      100% {
+        transform: translateX(0);
+      }
+    }
 
   body {
     background: #fff;
@@ -24,7 +43,7 @@
       bottom: 0;
       height: 100%;
       z-index: -10;
-      background-color: rgb(118, 25, 223);
+      background-color: #fff;
   }
       .loading--text {
         font-family: 'Roboto', sans-serif;

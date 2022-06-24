@@ -1,26 +1,16 @@
-
-body
-{  
-    animation: expand 3s ;
-      overflow: hidden;
-      &::after + .loading__text{
-        display: none;
-        content: "";
-      }
-  }
-  
-  @keyframes expand {
-      0% {
-        transform: translateX(1);
-      }
-  
-      100% {
-        transform: translateX(0);
-      }
-    }
-  
-
-/*section localisation
+$box-shadow-size:0px 10px 12px -4px;
+$focus-shadow-size:0px 10px 17px 6px;
+@mixin box-shadow($shadow-size: $box-shadow-size){
+    box-shadow: $shadow-size $couleurshadow;
+}
+body {
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+   
+}
+.header-accueil{
+justify-content: center;
+}
     /*section reservation*/
     .resa {
         display: flex;
@@ -29,12 +19,15 @@ body
         background-color: rgb(246, 246, 246);
         padding: 15px 0 55px 0;
         .resa__titre {
+            display: flex;
             flex-wrap: wrap;
                 text-align: center;
         }
         .resa__texte {
+            display: flex;
             flex-wrap: wrap;
             text-align: center;
+            padding-bottom: 10px;
         }
     }
         /*section choix du resto*/
@@ -45,18 +38,18 @@ body
             display: flex;
             align-items: center;
             background-color:rgb(246, 246, 246);
-                box-shadow: 0px 10px 12px -4px rgba(0,0,0,0.4);
-                border-radius: 25px;
-                width: 300px;
-                margin: auto;
-                height: 80px;
-                position: relative;
-                margin-top: 30px;
-                cursor: pointer;
-                &:hover{
-                    background-color: $couleurprimairefade;
+            box-shadow: 0px 10px 12px -4px rgba(0,0,0,0.4);
+            border-radius: 25px;
+            width: 90%;
+            margin: auto;
+            height: 80px;
+            position: relative;
+            margin-top: 30px;
+            cursor: pointer;
+            &:hover{
+            background-color: $couleurprimairefade;
                 & .bloc> i{
-                    color: $couleurprimaire;
+                color: $couleurprimaire;
                 }
             }
             .bulle{
@@ -108,6 +101,11 @@ body
         width: 100%;
         margin-bottom: 25px;
         position: relative;
+        @include box-shadow($box-shadow-size);
+        transition: .4s;
+        &:hover{
+            @include box-shadow($focus-shadow-size)
+        }
            
     img {
         width: 100%;
@@ -121,31 +119,28 @@ body
           display: flex;
           flex-direction: column;
           padding-left: 15px;
+          padding-bottom: 10px;
           .choix-resto h2{
               margin-bottom: 0;
           }
           .lieu p{
               margin-top: 0;
+              font-weight: normal;
           }
     }
-    .coeur{
-          padding: 15px 25px 0 0;
-          font-size: 30px;
-          margin-right: 25px;
-        position: relative;
-        cursor: pointer;
-         
-        &:hover .fa-solid{
-             transform: scale(1);
-             transition-duration: 1s;
-         }
-        }
-      
+     .coeur{
+        border: 5px;
+     } 
     
     .choix-resto {
         display: flex;
         justify-content: space-between;
-       
+        padding-top: 10px;
+       & h2{
+        font-weight: bold;
+        text-transform: inherit;
+        line-height: 1em;
+       }
     }
     }
 
@@ -160,7 +155,11 @@ body
         }
     }
     /***restaurants***/ 
-    
+    .restos{
+    -webkit-box-shadow: inset 0px 4px 16px -11px rgba(0,0,0,0.98); 
+    box-shadow: inset 0px 4px 16px -11px rgba(0,0,0,0.98);
+    padding: 20px 10px 15px 20px;
+    }
     .resto--card{
         display: flex;
         justify-content: space-evenly;
@@ -171,28 +170,70 @@ body
         .pres--card{
         width: 350px;
         img{
-            height: 270px;
+            height: 250px;
         }
+        } 
+    }
+    .footer-box{
+        display: flex;
+        justify-content: space-between;
+        .part-line{
+            margin-top: 5%;
         }
-       .footer-box{
-           display: flex;
-       } 
+        .footer__infos p{
+            padding-bottom: 5%;
+        }
     }
-    }
+    
+}
     /******VERSION DESKTOP*****/ 
     @media all and (min-width:992px){
      
       header .logo {
-        transform: scale(1.9);
+        transform: scale(1.4);
+    }
+    /****partie fonctionnement et resa***/ 
+
+    .container{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        .fonctionnement{
+            width: 40%;
+            padding-left: 10px;
+        .container--bloc{
+            display: flex;
+            flex-direction: column;
+            .choix{
+                margin-top: 15px;
+            }
+        }
+    }
+    .resa{
+        width: 60%;
+        .btn{
+            margin-top: 10%;
+            transform: scale(1.4);
+        }
+    }
     }
    /***restaurants***/ 
+   .restos{
+    padding: 10 0 0 0;
+   }
     .resto--card{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
     }
+    .pres--card{
+        width: 340px;
+        img{
+            height: 210px;
+        }
+    }
     /***footer***/
     .footer-box{
-        display: flex;
+        justify-content: space-evenly;
     }
     }

@@ -1,12 +1,22 @@
-
-
-.pres--card .coeur .fa-solid{
+ 
+.coeur{
+  font-size: 30px;
+  position: relative;
+  margin-right: 25px;
+  cursor: pointer;
+}
+.coeur .fa-solid{
   position: absolute;
   transform: scale(0);
-  color: #9356DC;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
+  text-shadow: 0px 0px 1px -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
 -webkit-text-stroke-color: transparent;
-} 
+}
+
+.coeur:hover + .fa-solid {
+  transform: scale(1);
+  transition-duration: 1s;
+}

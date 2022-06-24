@@ -1,6 +1,4 @@
 
-@mixin loading-page2 {
-    
 
 *{
     margin:0;
@@ -68,7 +66,7 @@ body{
         content: "";
     }
 }
-}
+
 @keyframes rota {
     100% {
         transform: rotate(360deg);
