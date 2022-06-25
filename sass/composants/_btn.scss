@@ -11,7 +11,7 @@ $focus-shadow-size:0px 10px 17px 6px;
     background: linear-gradient(353deg, rgba(147,86,220,1) 36%, rgba(255,121,218,1) 79%, rgba(255,121,218,1) 100%);
     @include box-shadow($box-shadow-size);
     padding:15px 30px 15px 30px ;
-    transition: box-shadow 1s;
+    transition: box-shadow 1s ease-in-out;
     cursor: pointer;
     &:hover {
         filter: brightness(150%);

@@ -64,12 +64,11 @@ body {
 }
 
   h2{
+    padding-top: 25px;
   text-transform: uppercase;
   font-weight: lighter;
   display:inline-block;
    margin:0;
-}
-
 .underline {
   width: 50%;
   height: 3px;
@@ -77,12 +76,13 @@ body {
   border-bottom:3px solid #99E2D0;
   overflow:hidden;
 }
-
+  }
 .bloc-entrees, .bloc-plats, .bloc-desserts{
   background-color: rgb(246, 246, 246);
   padding-top: 15px;
   padding-bottom: 15px;
   opacity:0;
+  transition: 3s ease-in-out;
 }
   .bloc-entrees{
     -moz-animation: anim 1s linear forwards 1s;
@@ -100,11 +100,11 @@ body {
 }
 .bloc-desserts{
 
-  -moz-animation: anim 1s linear forwards 3;
-  -webkit-animation: anim 1s linear forwards 3;
-  -o-animation: anim 1s linear forwards 3;
-  -ms-animation: anim 1s linear forwards 3;
-  animation: anim 1s linear forwards 3;
+  -moz-animation: anim 1s linear forwards 3s;
+  -webkit-animation: anim 1s linear forwards 3s;
+  -o-animation: anim 1s linear forwards 3s;
+  -ms-animation: anim 1s linear forwards 3s;
+  animation: anim 1s linear forwards 3s;
 }
 @-moz-keyframes anim {
   0%  {opacity:0.2;}
@@ -144,8 +144,16 @@ body {
   margin-top: 15px;
 }
 .texte{
-  width: 130px;
+  width: 100px;
+  height: 54px;
   flex-grow: 1;
+  
+  p, h3{
+    overflow: hidden;
+    text-decoration: dotted;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 .prix{
   align-self: flex-end;
