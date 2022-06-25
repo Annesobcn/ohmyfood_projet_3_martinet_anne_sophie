@@ -38,9 +38,11 @@ body {
 }
 .menu .titremenu {
   font-family: shrikhand;
+  font-size: smaller;
   display: flex;
   justify-content: space-between;
   align-items:center;
+  padding-left: 10px;
 }
 .coeur{
   font-size: 30px;
@@ -64,6 +66,7 @@ body {
 }
 
   h2{
+    padding-left: 10px;
     padding-top: 25px;
   text-transform: uppercase;
   font-weight: lighter;
@@ -136,7 +139,7 @@ body {
   align-items: center;
   border-radius: 15px;
   background-color: white;
-  width: 80%;
+  width: 90%;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0px 8px 12px 4px rgba(0,0,0,0.20);
@@ -196,6 +199,13 @@ p{
 }
 /**********VERSION TABLETTES**********/ 
 @media all and (min-width:768px){
+ header, img{
+  display: flex;
+  justify-content: center;
+ }
+ .titremenu{
+  justify-content: space-evenly;
+ }
   .containermenu{
     display: flex;
     width: 100%;
@@ -203,4 +213,24 @@ p{
       width: 33%;
     }
   }
+  .footer-box{
+    display: flex;
+    justify-content: space-between;
+    .part-line{
+        margin-top: 5%;
+    }
+    .footer__infos p{
+        padding-bottom: 5%;
+    }
 }
+}
+ /******VERSION DESKTOP*****/ 
+ @media all and (min-width:992px){
+  .btn{
+    transform: scale(1.4);
+}
+   /***footer***/
+   .footer-box{
+    justify-content: space-evenly;
+}
+ }
