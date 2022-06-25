@@ -194,3 +194,13 @@ p{
   justify-content: center;
   padding-bottom: 55px;
 }
+/**********VERSION TABLETTES**********/ 
+@media all and (min-width:768px){
+  .containermenu{
+    display: flex;
+    width: 100%;
+    .containerentrees, .containerplats, .containerdesserts {
+      width: 33%;
+    }
+  }
+}

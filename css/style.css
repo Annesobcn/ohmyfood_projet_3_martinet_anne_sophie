@@ -476,6 +476,16 @@ p {
   padding-bottom: 55px;
 }
 
+/**********VERSION TABLETTES**********/
+@media all and (min-width: 768px) {
+  .containermenu {
+    display: flex;
+    width: 100%;
+  }
+  .containermenu .containerentrees, .containermenu .containerplats, .containermenu .containerdesserts {
+    width: 33%;
+  }
+}
 .btn {
   text-decoration: none;
   border-radius: 25px;
