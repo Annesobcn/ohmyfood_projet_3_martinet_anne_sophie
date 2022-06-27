@@ -1,6 +1,9 @@
 
 
   .loadingpage{
+    animation: fadeInAnimation ease 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     background:no-repeat rgba(255, 255, 255, 1);
     cursor: wait;
     height: 100%;
@@ -68,7 +71,18 @@
         }
       }
       }
-    
+      @keyframes fadeInAnimation {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: .8;
+         }
+        100%{
+            opacity: 0;
+        }
+    }
+      
 
   @keyframes pulsing {
     0% {

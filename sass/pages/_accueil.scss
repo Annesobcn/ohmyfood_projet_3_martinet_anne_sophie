@@ -1,21 +1,7 @@
-
-.loadingpage {
-    animation: fadeInAnimation ease 10s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    
-}
-  
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .8;
-     }
-    100%{
-        opacity: 0;
-    }
+$box-shadow-size:0px 10px 12px -4px;
+$focus-shadow-size:0px 10px 17px 6px;
+@mixin box-shadow($shadow-size: $box-shadow-size){
+    box-shadow: $shadow-size $couleurshadow;
 }
 body{
     margin: 0;
