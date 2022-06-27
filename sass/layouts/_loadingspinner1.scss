@@ -7,8 +7,10 @@
     animation-delay: 3s;
     background:no-repeat rgba(255, 255, 255, 1);
     left: 0;
-    position: fixed;
+    position: absolute;
+    right: 0;
     top: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,19 +28,6 @@
     position: relative;
     animation: colorChange 15s infinite;
   }
-      h1 {
-        font-family: 'Roboto', sans-serif;
-        padding-top: 20px;
-        font-size: 15px;
-        font-weight: 400;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        text-align: center;
-        color: $couleurprimaire;
-        animation:pulsing 2s infinite,
-         fading ease-in-out 2s 3s;
-      }
-    
       .loader::before {
         content: "";
         width: 150px;
