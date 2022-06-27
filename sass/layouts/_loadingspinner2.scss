@@ -1,5 +1,5 @@
 
-.loadingpage {
+.loadingpage{
     animation: fadeInAnimation ease 10s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -7,23 +7,36 @@
     position: absolute;
     overflow: hidden;
     z-index: 9999;
-    width: 100%;
-    height: 100%;
-    
+    animation-delay: 3s;
 }
   
 @keyframes fadeInAnimation {
     0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+     }
+    100%{
+        opacity: 0;
+    }
+}
+header, .localisation, .resa, .fonctionnement, .restos, footer{
+    animation: fadeInReverse ease 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInReverse {
+    0% {
         opacity: 0;
     }
     50% {
-        opacity: .8;
+        opacity: .2;
      }
     100%{
         opacity: 1;
     }
 }
-
 .loader{
     position: fixed;
     margin: auto;

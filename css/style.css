@@ -6,69 +6,12 @@
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  background: no-repeat rgb(255, 255, 255);
-  cursor: wait;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition-duration: 3s;
-}
-.loadingpage .loader {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  color: #FF79DA;
-  border: 1px solid #FF79DA;
-  box-shadow: 0 0 30px currentColor, inset 0 0 30px currentColor;
-  margin-bottom: 20px;
-  position: relative;
-  -webkit-animation: colorChange 15s infinite;
-          animation: colorChange 15s infinite;
-}
-.loadingpage h1 {
-  font-family: "Roboto", sans-serif;
-  padding-top: 20px;
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #9356DC;
-  -webkit-animation: pulsing 2s infinite, fading ease-in-out 2s 3s;
-          animation: pulsing 2s infinite, fading ease-in-out 2s 3s;
-}
-.loadingpage .loader::before {
-  content: "";
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  color: #FF79DA;
-  box-shadow: 0 0 30px currentColor, inset 0 0 30px currentColor;
-  margin-bottom: 20px;
-  position: relative;
-  -webkit-animation: pulsing 2s infinite, colorChange 15s 3s;
-          animation: pulsing 2s infinite, colorChange 15s 3s;
-}
-.loadingpage .loader::before:after {
-  content: "";
-  width: 150px;
-  height: 150px;
+  background: #fff;
   position: absolute;
-  background: radial-gradient(circle, currentColor 50%, rgba(255, 255, 255, 0) 65%);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50%;
-  -webkit-animation: pulsing 2s infinite, colorChange 15s infinite;
-          animation: pulsing 2s infinite, colorChange 15s infinite;
+  overflow: hidden;
+  z-index: 9999;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 @-webkit-keyframes fadeInAnimation {
@@ -76,7 +19,7 @@
     opacity: 1;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
@@ -88,104 +31,127 @@
     opacity: 1;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
   }
 }
-@-webkit-keyframes pulsing {
+header, .localisation, .resa, .fonctionnement, .restos, footer {
+  -webkit-animation: fadeInReverse ease 10s;
+          animation: fadeInReverse ease 10s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInReverse {
   0% {
-    transform: scale(0.8);
     opacity: 0;
   }
-  40% {
-    opacity: 0.55;
+  50% {
+    opacity: 0.2;
   }
   100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-@keyframes pulsing {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.55;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fading {
-  0% {
     opacity: 1;
   }
-  25% {
-    opacity: 0.4;
+}
+
+@keyframes fadeInReverse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  position: fixed;
+  margin: auto;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 2px solid #9356DC;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  -webkit-animation: rota 2s infinite linear;
+          animation: rota 2s infinite linear;
+}
+.loader::before {
+  position: absolute;
+  margin: auto;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 2px solid #FF79DA;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  animation: rota 4s infinite linear reverse;
+  content: "";
+}
+.loader::after {
+  position: absolute;
+  margin: auto;
+  z-index: 9999;
+  width: 10px;
+  height: 100px;
+  border-radius: 50%;
+  background: #e3cdff;
+  border-top: 2px solid initial;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  -webkit-animation: beat 1s infinite;
+          animation: beat 1s infinite;
+  content: "";
+}
+
+@-webkit-keyframes rota {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rota {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes beat {
+  0% {
+    width: 0;
+    height: 0;
   }
   75% {
-    opacity: 1;
+    width: 40px;
+    height: 40px;
   }
   100% {
-    opacity: 0;
+    width: 0;
+    height: 0;
   }
 }
-@keyframes fading {
+@keyframes beat {
   0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.4;
+    width: 0;
+    height: 0;
   }
   75% {
-    opacity: 1;
+    width: 40px;
+    height: 40px;
   }
   100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes colorChange {
-  0% {
-    color: #FF79DA;
-  }
-  20% {
-    color: #9356DC;
-  }
-  40% {
-    color: #FF79DA;
-  }
-  60% {
-    color: #e3cdff;
-  }
-  80% {
-    color: #99E2D0;
-  }
-  100% {
-    color: #FF79DA;
-  }
-}
-@keyframes colorChange {
-  0% {
-    color: #FF79DA;
-  }
-  20% {
-    color: #9356DC;
-  }
-  40% {
-    color: #FF79DA;
-  }
-  60% {
-    color: #e3cdff;
-  }
-  80% {
-    color: #99E2D0;
-  }
-  100% {
-    color: #FF79DA;
+    width: 0;
+    height: 0;
   }
 }
 .header-accueil {
@@ -320,56 +286,6 @@ body {
 .restos .menulink, .restos a {
   text-decoration: none;
   color: inherit;
-}
-
-.pres--card {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 25px;
-  width: 100%;
-  margin-bottom: 25px;
-  position: relative;
-  box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
-  transition: 0.4s;
-}
-.pres--card:hover {
-  box-shadow: 0px 10px 17px 6px rgba(0, 0, 0, 0.4);
-}
-.pres--card img {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 25px 25px 0px 0px;
-}
-.pres--card .card--texte {
-  display: flex;
-  flex-direction: column;
-  padding-left: 15px;
-  padding-bottom: 10px;
-}
-.pres--card .card--texte .choix-resto h2 {
-  margin-bottom: 0;
-}
-.pres--card .card--texte .lieu p {
-  margin-top: 0;
-  font-weight: normal;
-}
-.pres--card .coeur {
-  border: 5px;
-}
-.pres--card .choix-resto {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-}
-.pres--card .choix-resto h2 {
-  font-weight: bold;
-  text-transform: inherit;
-  line-height: 1em;
 }
 
 /**********VERSION TABLETTES**********/
@@ -746,6 +662,56 @@ p {
 .coeur:hover + .fa-solid {
   transform: scale(1);
   transition-duration: 1s;
+}
+
+.pres--card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 25px;
+  width: 100%;
+  margin-bottom: 25px;
+  position: relative;
+  box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.4);
+  transition: 0.4s;
+}
+.pres--card:hover {
+  box-shadow: 0px 10px 17px 6px rgba(0, 0, 0, 0.4);
+}
+.pres--card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 25px 25px 0px 0px;
+}
+.pres--card .card--texte {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+.pres--card .card--texte .choix-resto h2 {
+  margin-bottom: 0;
+}
+.pres--card .card--texte .lieu p {
+  margin-top: 0;
+  font-weight: normal;
+}
+.pres--card .coeur {
+  border: 5px;
+}
+.pres--card .choix-resto {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.pres--card .choix-resto h2 {
+  font-weight: bold;
+  text-transform: inherit;
+  line-height: 1em;
 }
 
 .footer-box {

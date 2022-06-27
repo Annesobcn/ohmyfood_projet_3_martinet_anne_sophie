@@ -4,14 +4,11 @@
     animation: fadeInAnimation ease 10s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation-delay: 3s;
     background:no-repeat rgba(255, 255, 255, 1);
-    cursor: wait;
-    height: 100%;
     left: 0;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 9999; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,6 +68,34 @@
         }
       }
       }
+      
+      header, .localisation, .resa, .fonctionnement, .restos, footer{
+        animation: fadeInReverse ease 10s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInReverse {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: .2;
+         }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes fadeInReverse {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: .4;
+         }
+        100%{
+            opacity: 1;
+        }
+    }
       @keyframes fadeInAnimation {
         0% {
             opacity: 1;

@@ -1,8 +1,4 @@
-$box-shadow-size:0px 10px 12px -4px;
-$focus-shadow-size:0px 10px 17px 6px;
-@mixin box-shadow($shadow-size: $box-shadow-size){
-    box-shadow: $shadow-size $couleurshadow;
-}
+
 body{
     margin: 0;
     font-family: 'roboto', sans-serif;
@@ -45,8 +41,8 @@ justify-content: center;
             position: relative;
             margin-top: 30px;
             cursor: pointer;
-            &:hover{
-            background-color: $couleurprimairefade;
+                &:hover{
+                background-color: $couleurprimairefade;
                 & .bloc> i{
                 color: $couleurprimaire;
                 }
@@ -83,6 +79,9 @@ justify-content: center;
                     }
                 
                 /***section Restaurants***/
+                @mixin box-shadow($shadow-size: $box-shadow-size){
+                    box-shadow: $shadow-size $couleurshadow;
+                }
                 .restos{
                     padding: 20px 15px 15px 15px;
                     background-color: rgb(246, 246, 246);
@@ -92,56 +91,7 @@ justify-content: center;
                     } 
                 
             }
-    .pres--card {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        border-radius: 25px;
-        width: 100%;
-        margin-bottom: 25px;
-        position: relative;
-        @include box-shadow($box-shadow-size);
-        transition: .4s;
-        &:hover{
-            @include box-shadow($focus-shadow-size)
-        }
-           
-    img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 25px 25px 0px 0px ;
-    }
-    
-    .card--texte{
-          display: flex;
-          flex-direction: column;
-          padding-left: 15px;
-          padding-bottom: 10px;
-          .choix-resto h2{
-              margin-bottom: 0;
-          }
-          .lieu p{
-              margin-top: 0;
-              font-weight: normal;
-          }
-    }
-     .coeur{
-        border: 5px;
-     } 
-    
-    .choix-resto {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 10px;
-       & h2{
-        font-weight: bold;
-        text-transform: inherit;
-        line-height: 1em;
-       }
-    }
-    }
+  
 
     /**********VERSION TABLETTES**********/ 
     @media all and (min-width:768px){

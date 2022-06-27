@@ -3,6 +3,7 @@ $focus-shadow-size:0px 10px 17px 6px;
 @mixin box-shadow($shadow-size: $box-shadow-size){
     box-shadow: $shadow-size $couleurshadow;
 }
+
 .btn {
     text-decoration: none;
     border-radius: 25px;
