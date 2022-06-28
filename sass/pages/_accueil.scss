@@ -77,20 +77,6 @@ justify-content: center;
                     .bloc--texte {
                         font-weight: bold;
                     }
-                
-                /***section Restaurants***/
-                @mixin box-shadow($shadow-size: $box-shadow-size){
-                    box-shadow: $shadow-size $couleurshadow;
-                }
-                .restos{
-                    padding: 20px 15px 15px 15px;
-                    background-color: rgb(246, 246, 246);
-                    .menulink, a {
-                        text-decoration: none;
-                        color: inherit;
-                    } 
-                
-            }
   
 
     /**********VERSION TABLETTES**********/ 
@@ -119,7 +105,7 @@ justify-content: center;
         .pres--card{
         width: 350px;
         img{
-            height: 250px;
+            height: 200px;
         }
         } 
     }
@@ -178,7 +164,7 @@ justify-content: center;
     .pres--card{
         width: 340px;
         img{
-            height: 210px;
+            height: 180px;
         }
     }
     /***footer***/

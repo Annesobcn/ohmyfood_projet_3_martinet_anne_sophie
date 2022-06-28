@@ -1,6 +1,6 @@
 
 .loadingpage{
-    animation: fadeInAnimation ease 10s;
+    animation: fadeInAnimation ease-in-out 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     background: #fff;
@@ -15,14 +15,17 @@
         opacity: 1;
     }
     50% {
-        opacity: .5;
+        opacity: .6;
+     }
+     75% {
+        opacity: .2;
      }
     100%{
         opacity: 0;
     }
 }
 header, .localisation, .resa, .fonctionnement, .restos, footer{
-    animation: fadeInReverse ease 10s;
+    animation: fadeInReverse ease 6s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -31,6 +34,9 @@ header, .localisation, .resa, .fonctionnement, .restos, footer{
         opacity: 0;
     }
     50% {
+        opacity: 0;
+    }
+    80% {
         opacity: .2;
      }
     100%{

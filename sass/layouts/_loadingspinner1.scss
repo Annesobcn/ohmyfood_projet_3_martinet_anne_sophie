@@ -1,7 +1,7 @@
 
 
   .loadingpage{
-    animation: fadeInAnimation ease 10s;
+    animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-delay: 3s;
@@ -59,7 +59,7 @@
       }
       
       header, .localisation, .resa, .fonctionnement, .restos, footer{
-        animation: fadeInReverse ease 10s;
+        animation: fadeInReverse ease 5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }
