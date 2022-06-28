@@ -9,12 +9,15 @@
         text-decoration: none;
         color: inherit;
     }
+    .resto--card{
+        width: 100%;
+    }
 .pres--card {
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 25px;
-    width: 100%;
+    max-width: 350px;
     margin-bottom: 25px;
     position: relative;
     @include box-shadow($box-shadow-size);
@@ -24,7 +27,7 @@
     }
        
 img {
-    width: 100%;
+    max-width: 350px;
     height: 180px;
     object-fit: cover;
     object-position: center;
