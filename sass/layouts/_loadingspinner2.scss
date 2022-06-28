@@ -1,69 +1,35 @@
+.bloc-page {
+    animation: opening 3s linear;
+    opacity: 1;
+}
+    @keyframes opening {
+          0% {
+                opacity: 0;
+          }
+          50% {
+                opacity: 0;
+          }
+          100% {
+                opacity: 1;
+          }
+    }
+
+
 
 .loadingpage{
-    animation: fadeInAnimation ease-in-out 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     background: #fff;
     position: fixed;
+    overflow: hidden;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    /*
-    animation-delay: 3s;*/
-}
-  
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .6;
-     }
-     75% {
-        opacity: .2;
-     }
-    100%{
-        opacity: 0;
-    }
-}
-.bloc-page{
-    animation: fadeoutanimation 3s;
-    opacity:1;
-}
-@keyframes fadeoutanimation {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-    }
-
-/*
-header, .localisation, .resa, .fonctionnement, .restos, footer{
-    animation: fadeInReverse ease 6s;
+    animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    z-index: -1;
 }
-@keyframes fadeInReverse {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    80% {
-        opacity: .2;
-     }
-    100%{
-        opacity: 1;
-    }
-}*/
+
 .loader{
-    position: fixed;
+    position: absolute;
     margin: auto;
     top: 0;
     right: 0;
@@ -80,6 +46,7 @@ header, .localisation, .resa, .fonctionnement, .restos, footer{
     &::before {
         position: absolute;
         margin: auto;
+ 
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -92,6 +59,7 @@ header, .localisation, .resa, .fonctionnement, .restos, footer{
     &::after{
         position: absolute;
         margin: auto;
+
         width: 10px;
         height: 100px;
         border-radius: 50%;
@@ -103,7 +71,6 @@ header, .localisation, .resa, .fonctionnement, .restos, footer{
         content:"";
     }
 }
-       
 
 @keyframes rota {
     100% {
@@ -124,3 +91,17 @@ header, .localisation, .resa, .fonctionnement, .restos, footer{
         height: 0;
     }
 }
+
+
+ 
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
