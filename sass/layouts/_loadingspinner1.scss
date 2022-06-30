@@ -58,7 +58,7 @@
       }
       }
       
-      header, .localisation, .resa, .fonctionnement, .restos, footer{
+      .loadingpage{
         animation: fadeInReverse ease 5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
@@ -69,17 +69,6 @@
         }
         50% {
             opacity: .2;
-         }
-        100%{
-            opacity: 1;
-        }
-    }
-    @keyframes fadeInReverse {
-        0% {
-            opacity: 0;
-        }
-        50% {
-            opacity: .4;
          }
         100%{
             opacity: 1;
