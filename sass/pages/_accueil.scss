@@ -215,6 +215,9 @@ justify-content: center;
    /***restaurants***/ 
    .restos{
     padding-top: 10px;
+    & h1{
+        justify-self: center;
+    }
    }
     .resto--card{
         display: flex;
