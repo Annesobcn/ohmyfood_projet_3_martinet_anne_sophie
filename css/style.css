@@ -64,7 +64,7 @@
   height: 100px;
   border-radius: 50%;
   background: #e3cdff;
-  border-top: 2px solid initial;
+  border-top: 2px solid #9356DC;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   animation: beat 1s infinite;
@@ -386,7 +386,7 @@ body {
   }
   /***restaurants***/
   .restos {
-    padding: 10 0 0 0;
+    padding-top: 10px;
   }
   .resto--card {
     display: flex;

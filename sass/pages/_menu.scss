@@ -64,20 +64,23 @@ body {
   transform: scale(1);
   transition-duration: 1s;
 }
+.typedeplats{
+  width: fit-content;
 
   h2{
-    padding-left: 10px;
+    width: 100%;
     padding-top: 25px;
   text-transform: uppercase;
   font-weight: lighter;
   display:inline-block;
    margin:0;
-.underline {
-  width: 50%;
-  height: 3px;
-  margin: 0px;
-  border-bottom:3px solid #99E2D0;
-  overflow:hidden;
+  }
+   .underline {
+     width: 55px;
+     height: 3px;
+     margin: 0px;
+     border-bottom:3px solid #99E2D0;
+     overflow:hidden;
 }
   }
 .bloc-entrees, .bloc-plats, .bloc-desserts{
@@ -234,6 +237,9 @@ p{
 }
  /******VERSION DESKTOP*****/ 
  @media all and (min-width:992px){
+  .typedeplats{
+    padding-left: 30px;
+  }
   .btn{
     transform: scale(1.4);
 }
