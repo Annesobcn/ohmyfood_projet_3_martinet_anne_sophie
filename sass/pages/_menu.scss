@@ -176,8 +176,16 @@ justify-content: center;
 }
 .plat:hover .checkbox{
 width: 70px;
+& i{
+  font-size: 1.5em;
+animation: rota 1s ease;
 }
-
+}
+@keyframes rota {
+  100% {
+      transform: rotate(360deg);
+  }
+}
 
 h3{
   margin: 5px;

@@ -174,7 +174,23 @@ h2 .underline {
 .plat:hover .checkbox {
   width: 70px;
 }
+.plat:hover .checkbox i {
+  font-size: 1.5em;
+  -webkit-animation: rota 1s ease;
+          animation: rota 1s ease;
+}
 
+@-webkit-keyframes rota {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rota {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 h3 {
   margin: 5px;
 }
