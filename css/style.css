@@ -376,7 +376,7 @@ body {
   }
 }
 /******VERSION DESKTOP*****/
-@media all and (min-width: 992px) {
+@media all and (min-width: 1300px) {
   header .logo {
     transform: scale(1.4);
   }
