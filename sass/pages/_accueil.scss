@@ -130,11 +130,12 @@ justify-content: center;
     .choix-resto {
         display: flex;
         justify-content: space-between;
-        padding-top: 10px;
+        align-items: center;
        & h2{
         font-weight: bold;
         text-transform: inherit;
         line-height: 1em;
+        padding-bottom: 10px;
        }
     }
     }
@@ -215,9 +216,6 @@ justify-content: center;
    /***restaurants***/ 
    .restos{
     padding-top: 10px;
-    & h1{
-        justify-self: center;
-    }
    }
     .resto--card{
         display: flex;
