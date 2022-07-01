@@ -164,9 +164,9 @@ justify-content: center;
             margin: 10px;
         }
         .pres--card{
-        width: 350px;
+        width: 300px;
         img{
-            height: 250px;
+            height: 200px;
         }
         } 
     }
@@ -215,19 +215,22 @@ justify-content: center;
     }
    /***restaurants***/ 
    .restos{
-    padding-top: 10px;
+    padding: 10px 0 0 0;
    }
     .resto--card{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-    }
+        .menulink{
+            margin: 0;
+        }
     .pres--card{
-        width: 340px;
+        width: 350px;
         img{
-            height: 210px;
+            height: 250px;
         }
     }
+}
     /***footer***/
     .footer-box{
         justify-content: space-evenly;

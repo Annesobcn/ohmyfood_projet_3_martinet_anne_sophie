@@ -358,10 +358,10 @@ body {
     margin: 10px;
   }
   .resto--card .pres--card {
-    width: 350px;
+    width: 300px;
   }
   .resto--card .pres--card img {
-    height: 250px;
+    height: 200px;
   }
 
   .footer-box {
@@ -408,7 +408,7 @@ body {
 
   /***restaurants***/
   .restos {
-    padding-top: 10px;
+    padding: 10px 0 0 0;
   }
 
   .resto--card {
@@ -416,12 +416,14 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
   }
-
-  .pres--card {
-    width: 340px;
+  .resto--card .menulink {
+    margin: 0;
   }
-  .pres--card img {
-    height: 210px;
+  .resto--card .pres--card {
+    width: 350px;
+  }
+  .resto--card .pres--card img {
+    height: 250px;
   }
 
   /***footer***/
